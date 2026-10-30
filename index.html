@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Sonam Tenzin, Diploma student in Computer System and Networking at Jigme Namgyal Engineering College.">
+  <title>Sonam Tenzin | my_Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <canvas id="networkCanvas" class="network-bg" aria-hidden="true"></canvas>
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="#home" class="logo">Sonam Tenzin</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark theme">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HOME ========== -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1>Sonam Tenzin</h1>
+        <h2>Computer System and Networking Student</h2>
+                <p class="hero-roles">
+          Interested in: <span id="typedText">Network Engineering</span><span class="cursor" aria-hidden="true">|</span>
+        </p>
+        <p class="hero-intro">
+          I am a final-year Diploma student at Jigme Namgyal Engineering College.
+          I enjoy network design, Linux administration and cybersecurity, and I am
+          working towards a career in network engineering.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+           <img src="images/profile.jpg" alt="Portrait of Sonam Tenzin" width="300" height="300">
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ME ========== -->
+    <section id="about" class="section">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <p>
+          I am Sonam Tenzin, a Diploma student in Computer System and Networking at
+          Jigme Namgyal Engineering College. I study how networks are designed,
+          configured and secured, and I enjoy turning what I learn in class into
+          practical projects using simulators and virtual machines.
+        </p>
+        <p>
+          My interests include computer networking, Linux server administration,
+          cybersecurity, and web development. I am also interested in how technology
+          supports business.
+        </p>
+        <p>
+          <strong>Career goal:</strong> I want to build a career in network
+          engineering, system administration or cybersecurity.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+
+        <article class="skill-card">
+          <h3>Networking</h3>
+          <ul>
+            <li>IP addressing and subnetting</li>
+            <li>Routing and switching</li>
+            <li>VLANs</li>
+            <li>Basic BGP</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Systems and Tools</h3>
+          <ul>
+            <li>Linux and Ubuntu Server administration</li>
+            <li>Windows Server 2022</li>
+            <li>VirtualBox virtualisation</li>
+            <li>Cisco Packet Tracer</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Web Development</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git and GitHub</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Programming and Data</h3>
+          <ul>
+            <li>Basic Python</li>
+            <li>pandas</li>
+            <li>Data visualisation</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Security and Troubleshooting</h3>
+          <ul>
+            <li>Cybersecurity fundamentals</li>
+            <li>Basic troubleshooting</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <h3>JNEC Events Hub</h3>
+          <p>
+            A student events website built with HTML, CSS, JavaScript and Bootstrap.
+            It was developed through GitHub collaboration, including a merged pull request.
+          </p>
+          <ul class="tech-tags" aria-label="Technologies used">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+            <li>GitHub</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/Sonamderrick/Events_hub" target="_blank" rel="noopener noreferrer">View Repository</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>BGP Network Design and Implementation</h3>
+          <p>
+            A simulated network connecting a head office, an ISP and a branch office,
+            designed in Cisco Packet Tracer. It uses BGP/eBGP and VLANs and includes
+            access control requirements.
+          </p>
+          <ul class="tech-tags" aria-label="Technologies used">
+            <li>Cisco Packet Tracer</li>
+            <li>BGP / eBGP</li>
+            <li>VLANs</li>
+            <li>Access Control</li>
+          </ul>
+          <div class="project-links">
+            <span class="no-link">Coursework project (no public repository)</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Road Condition and Maintenance Request System (RCMRS)</h3>
+          <p class="project-status">Proposed project (not yet built)</p>
+          <p>
+            A proposed Bhutan-focused system for reporting road damage. It would give
+            citizens a way to submit reports and give the relevant authorities a
+            dashboard to review and manage them.
+          </p>
+          <ul class="tech-tags" aria-label="Planned technologies">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+          </ul>
+          <div class="project-links">
+            <span class="no-link">Planned technologies; no repository yet</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section id="education" class="section">
+      <h2 class="section-title">Education</h2>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <p class="timeline-date">2025 – 2027 (expected)</p>
+          <h3>Diploma in Computer System and Networking</h3>
+          <p>Jigme Namgyal Engineering College</p>
+        </article>
+
+        <article class="timeline-item">
+          <p class="timeline-date">Completed 2024</p>
+          <h3>Higher Secondary Education</h3>
+          <p>DESI Higher Secondary School</p>
+        </article>
+
+        <article class="timeline-item">
+          <p class="timeline-date">Completed 2023</p>
+          <h3>Secondary Education</h3>
+          <p>Chumey Higher Secondary School</p>
+        </article>
+      </div>
+
+      <h3 class="subsection-title">Certifications</h3>
+      <div class="cert-grid">
+        <article class="cert-card">
+          <h4>Linux Server Admin</h4>
+          <p>Coursera certificate, issued through the college</p>
+        </article>
+        <article class="cert-card">
+          <h4>Python Tkinter: Design, Create and Integrate GUIs</h4>
+          <p>Coursera certificate, issued through the college</p>
+        </article>
+        <article class="cert-card">
+          <h4>Master Full-Stack Web Development with Laravel &amp; PHP</h4>
+          <p>Coursera certificate, issued through the college</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-intro">
+        I am open to internship and learning opportunities in networking,
+        system administration and cybersecurity. Feel free to get in touch.
+      </p>
+      <ul class="contact-list">
+        <li>
+          <strong>Email:</strong>
+          <a href="mailto:sonamthuks@gmail.com">sonamthuks@gmail.com</a>
+        </li>
+        <li>
+          <strong>GitHub:</strong>
+          <a href="https://github.com/Sonamderrick" target="_blank" rel="noopener noreferrer">github.com/Sonamderrick</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Sonam Tenzin. Jigme Namgyal Engineering College.</p>
+  </footer>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
+
