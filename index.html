@@ -4,18 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Sonam Tenzin, Diploma student in Computer System and Networking at Jigme Namgyal Engineering College.">
+  <meta name="theme-color" content="#0b1220">
   <title>Sonam Tenzin | my_Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
-
 <body>
   <canvas id="networkCanvas" class="network-bg" aria-hidden="true"></canvas>
-  <!-- ========== HEADER / NAVIGATION ========== -->
+
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
       <a href="#home" class="logo">Sonam Tenzin</a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >☰</button>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
@@ -26,39 +34,124 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark theme">🌙</button>
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Switch to dark theme"
+      >🌙</button>
     </nav>
   </header>
 
   <main>
-
-    <!-- ========== HOME ========== -->
     <section id="home" class="hero">
       <div class="hero-text">
         <p class="hero-greeting">Hello, I'm</p>
         <h1>Sonam Tenzin</h1>
         <h2>Computer System and Networking Student</h2>
-                <p class="hero-roles">
-          Interested in: <span id="typedText">Network Engineering</span><span class="cursor" aria-hidden="true">|</span>
+
+        <p class="hero-roles">
+          Interested in:
+          <span id="typedText">Network Engineering</span>
+          <span class="cursor" aria-hidden="true">|</span>
         </p>
+
         <p class="hero-intro">
           I am a final-year Diploma student at Jigme Namgyal Engineering College.
           I enjoy network design, Linux administration and cybersecurity, and I am
           working towards a career in network engineering.
         </p>
+
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">View My Projects</a>
           <a href="#contact" class="btn btn-secondary">Contact Me</a>
         </div>
       </div>
+
       <div class="hero-image">
-           <img src="images/profile.jpg" alt="Portrait of Sonam Tenzin" width="300" height="300">
+        <div
+          class="photo-slideshow"
+          id="photoSlideshow"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Sonam Tenzin photo slideshow"
+          tabindex="0"
+        >
+          <div class="slides" id="photoSlides" aria-live="off">
+            <figure class="slide is-active" aria-hidden="false">
+              <img
+                src="images/profile.jpg"
+                alt="Portrait of Sonam Tenzin"
+                width="480"
+                height="480"
+                fetchpriority="high"
+              >
+            </figure>
+
+            <figure class="slide" aria-hidden="true">
+              <img
+                src="images/profile-2.jpg"
+                alt="Sonam Tenzin working on a networking project"
+                width="480"
+                height="480"
+                loading="lazy"
+              >
+            </figure>
+
+            <figure class="slide" aria-hidden="true">
+              <img
+                src="images/profile-3.jpg"
+                alt="Sonam Tenzin at college"
+                width="480"
+                height="480"
+                loading="lazy"
+              >
+            </figure>
+          </div>
+
+          <button
+            class="slide-control slide-prev"
+            id="slidePrev"
+            type="button"
+            aria-label="Show previous photo"
+          >‹</button>
+
+          <button
+            class="slide-control slide-next"
+            id="slideNext"
+            type="button"
+            aria-label="Show next photo"
+          >›</button>
+
+          <div class="slide-indicators" id="slideIndicators" aria-label="Choose a photo">
+            <button
+              class="slide-indicator is-active"
+              type="button"
+              aria-label="Show photo 1 of 3"
+              aria-current="true"
+            ></button>
+            <button
+              class="slide-indicator"
+              type="button"
+              aria-label="Show photo 2 of 3"
+            ></button>
+            <button
+              class="slide-indicator"
+              type="button"
+              aria-label="Show photo 3 of 3"
+            ></button>
+          </div>
+
+          <p class="sr-only" id="slideStatus" aria-live="polite" aria-atomic="true">
+            Photo 1 of 3
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- ========== ABOUT ME ========== -->
     <section id="about" class="section">
       <h2 class="section-title">About Me</h2>
+
       <div class="about-content">
         <p>
           I am Sonam Tenzin, a Diploma student in Computer System and Networking at
@@ -66,11 +159,13 @@
           configured and secured, and I enjoy turning what I learn in class into
           practical projects using simulators and virtual machines.
         </p>
+
         <p>
           My interests include computer networking, Linux server administration,
           cybersecurity, and web development. I am also interested in how technology
           supports business.
         </p>
+
         <p>
           <strong>Career goal:</strong> I want to build a career in network
           engineering, system administration or cybersecurity.
@@ -78,11 +173,10 @@
       </div>
     </section>
 
-    <!-- ========== SKILLS ========== -->
     <section id="skills" class="section">
       <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
 
+      <div class="skills-grid">
         <article class="skill-card">
           <h3>Networking</h3>
           <ul>
@@ -129,15 +223,13 @@
             <li>Basic troubleshooting</li>
           </ul>
         </article>
-
       </div>
     </section>
 
-    <!-- ========== PROJECTS ========== -->
     <section id="projects" class="section">
       <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
 
+      <div class="projects-grid">
         <article class="project-card">
           <h3>JNEC Events Hub</h3>
           <p>
@@ -152,7 +244,11 @@
             <li>GitHub</li>
           </ul>
           <div class="project-links">
-            <a href="https://github.com/Sonamderrick/Events_hub" target="_blank" rel="noopener noreferrer">View Repository</a>
+            <a
+              href="https://github.com/Sonamderrick/Events_hub"
+              target="_blank"
+              rel="noopener noreferrer"
+            >View Repository</a>
           </div>
         </article>
 
@@ -193,11 +289,9 @@
             <span class="no-link">Planned technologies; no repository yet</span>
           </div>
         </article>
-
       </div>
     </section>
 
-    <!-- ========== EDUCATION ========== -->
     <section id="education" class="section">
       <h2 class="section-title">Education</h2>
 
@@ -222,15 +316,18 @@
       </div>
 
       <h3 class="subsection-title">Certifications</h3>
+
       <div class="cert-grid">
         <article class="cert-card">
           <h4>Linux Server Admin</h4>
           <p>Coursera certificate, issued through the college</p>
         </article>
+
         <article class="cert-card">
           <h4>Python Tkinter: Design, Create and Integrate GUIs</h4>
           <p>Coursera certificate, issued through the college</p>
         </article>
+
         <article class="cert-card">
           <h4>Master Full-Stack Web Development with Laravel &amp; PHP</h4>
           <p>Coursera certificate, issued through the college</p>
@@ -238,13 +335,14 @@
       </div>
     </section>
 
-    <!-- ========== CONTACT ========== -->
     <section id="contact" class="section">
       <h2 class="section-title">Contact</h2>
+
       <p class="contact-intro">
         I am open to internship and learning opportunities in networking,
         system administration and cybersecurity. Feel free to get in touch.
       </p>
+
       <ul class="contact-list">
         <li>
           <strong>Email:</strong>
@@ -252,21 +350,39 @@
         </li>
         <li>
           <strong>GitHub:</strong>
-          <a href="https://github.com/Sonamderrick" target="_blank" rel="noopener noreferrer">github.com/Sonamderrick</a>
+          <a
+            href="https://github.com/Sonamderrick"
+            target="_blank"
+            rel="noopener noreferrer"
+          >github.com/Sonamderrick</a>
         </li>
       </ul>
     </section>
+
+    <section id="music" class="section">
+      <h2 class="section-title">Music</h2>
+
+      <div class="youtube-player">
+        <iframe
+        src="https://www.youtube.com/embed/F1C1bKEkriI?autoplay=1&amp;mute=1"       
+           title="YouTube music video"
+          allow="autoplay; encrypted-media; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
   </main>
 
-  <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <p>&copy; 2026 Sonam Tenzin. Jigme Namgyal Engineering College.</p>
   </footer>
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
-
-  <script src="js/script.js"></script>
-
+  <button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+  >↑</button>
 </body>
 </html>
-
